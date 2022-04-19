@@ -1,23 +1,19 @@
-
+import Row from "./Row";
+import requsts from "./request";
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
 
-        </a>
-      </header>
+      <Row title="NETFLIX ORIGINALS" fetchUrl={requsts.fetchNetflixOrginals} isLargeRow />
+      <Row title="Trending Now" fetchUrl={requsts.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requsts.fetchTopRated} />
+      <Row title="Horror" fetchUrl={requsts.fetchHorrorMovies} />
+      <Row title="Action" fetchUrl={requsts.fetchActionMovies} />
+      <Row title="Romance" fetchUrl={requsts.fetchRomanceMovies} />
+      <Row title="Comedy" fetchUrl={requsts.fetchComedyMovies} />
+      <Row title="Documentery" fetchUrl={requsts.fetchDocumentaries} />
     </div>
   );
 }
