@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 import axios from './axios'
 import './Row.css'
 
-const base_url = "https://image.tmdb.org/t/p/original/";
+const base_url = "https://image.tmdb.org/t/p/original";
 
 function Row({ title, fetchUrl, isLargeRow }) {
     const [movies, setMovies] = useState([]);
@@ -14,6 +14,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         //if movies changed run this
         async function fetchData() {
             const request = await axios.get(fetchUrl);
+            console.log(fetchUrl)
             setMovies(request.data.results)
             return request
         }
