@@ -18,18 +18,19 @@
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
 }
-  
+
 .row__poster{
     object-fit: contain;
     margin-right: 10px;
-    max-height: 100px;
+    max-width: 300px;
+    max-height: 300px;
     transition: transform 450ms;
 }
 .row__poster:hover{
     transform: scale(1.08);
 }
 .row__posterLarge{
-    max-height: 250px;
+    max-height: 300px;
 }
 
 .row__posterLarge:hover{
